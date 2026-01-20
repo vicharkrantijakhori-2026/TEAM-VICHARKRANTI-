@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEAM VICHARKRANTI | Updates</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        /* CSS index.html sarakhach aahe */
+        :root { --primary: #0056b3; --accent: #FF6600; --bg: #ffffff; --text-dark: #1a1a1a; --text-light: #666666; --border: rgba(0,0,0,0.08); }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        body { background: var(--bg); color: var(--text-dark); }
+        header { position: fixed; top: 0; width: 100%; z-index: 2000; padding: 12px 8%; display: flex; justify-content: space-between; align-items: center; background: rgba(255, 255, 255, 0.85); border-bottom: 1px solid var(--border); backdrop-filter: blur(15px); }
+        .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+        .logo-img { width: 45px; height: 45px; }
+        .brand-text { font-size: 18px; font-weight: 800; color: var(--text-dark); text-transform: uppercase; }
+        .brand-text span { color: var(--accent); }
+        nav ul { display: flex; list-style: none; gap: 25px; }
+        nav ul li a { color: var(--text-dark); text-decoration: none; font-weight: 600; font-size: 14px; }
+        
+        section { padding: 160px 8% 80px; min-height: 100vh; text-align: center; }
+        .title { font-size: 45px; font-weight: 900; margin-bottom: 40px; }
+        .title span { color: var(--primary); }
+
+        .news-container { max-width: 800px; margin: 0 auto; text-align: left; }
+        .news-card { background: white; border: 1px solid var(--border); border-radius: 15px; padding: 30px; margin-bottom: 20px; transition: 0.3s; }
+        .news-card:hover { border-color: var(--primary); transform: translateX(10px); }
+        .date { color: var(--primary); font-weight: 800; font-size: 14px; text-transform: uppercase; }
+        .news-card p { margin-top: 10px; font-size: 18px; line-height: 1.6; }
+
+        .menu-toggle { display: none; cursor: pointer; flex-direction: column; gap: 6px; }
+        .menu-toggle span { width: 28px; height: 3px; background: var(--text-dark); }
+        .mobile-overlay { position: fixed; top: 0; right: -100%; width: 100%; height: 100vh; background: white; z-index: 2500; display: flex; flex-direction: column; justify-content: center; align-items: center; transition: 0.5s ease; }
+        .mobile-overlay.active { right: 0; }
+        .mobile-overlay a { font-size: 28px; font-weight: 800; color: var(--text-dark); text-decoration: none; margin: 20px 0; }
+        @media (max-width: 900px) { .menu-toggle { display: flex; } nav ul { display: none; } }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="brand"><img src="logo.jpg" class="logo-img"><div class="brand-text">TEAM <span>VICHARKRANTI</span></div></a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="news.html">Updates</a></li>
+                <li><a href="members.html">Members</a></li>
+                <li><a href="competition.html">Competition</a></li>
+                <li><a href="location.html">Location</a></li>
+            </ul>
+            <div class="menu-toggle" id="mobile-btn"><span></span><span></span><span></span></div>
+        </nav>
+    </header>
+
+    <div class="mobile-overlay" id="overlay">
+        <a href="index.html">Home</a><a href="news.html">Updates</a><a href="members.html">Members</a><a href="competition.html">Competition</a><a href="location.html">Location</a>
+    </div>
+
+    <section>
+        <h1 class="title">महत्त्वाचे <span>अपडेट्स</span></h1>
+        <div class="news-container">
+            <div class="news-card">
+                <span class="date">१९ जानेवारी २०२६</span>
+                <p>📢 राज्यस्तरीय वक्तृत्व स्पर्धा-२०२७ लवकरच तारीख जाहीर होणार आहे. तयारीला लागा!</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const btn = document.getElementById('mobile-btn'), overlay = document.getElementById('overlay');
+        btn.onclick = () => { overlay.classList.toggle('active'); };
+    </script>
+</body>
+</html>

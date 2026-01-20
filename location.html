@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEAM VICHARKRANTI | Location & Contact</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #0056b3; --accent: #FF6600; --bg: #ffffff; --text-dark: #1a1a1a; --text-light: #666666; --border: rgba(0,0,0,0.08); }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        body { background: var(--bg); color: var(--text-dark); }
+        
+        header { position: fixed; top: 0; width: 100%; z-index: 2000; padding: 12px 8%; display: flex; justify-content: space-between; align-items: center; background: rgba(255, 255, 255, 0.85); border-bottom: 1px solid var(--border); backdrop-filter: blur(15px); }
+        .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+        .logo-img { width: 45px; height: 45px; }
+        .brand-text { font-size: 18px; font-weight: 800; color: var(--text-dark); text-transform: uppercase; }
+        .brand-text span { color: var(--accent); }
+        
+        nav ul { display: flex; list-style: none; gap: 25px; }
+        nav ul li a { color: var(--text-dark); text-decoration: none; font-weight: 600; font-size: 14px; }
+        
+        section { padding: 120px 8% 80px; min-height: 100vh; text-align: center; }
+        .title { font-size: 45px; font-weight: 900; margin-bottom: 40px; margin-top: 40px; }
+        .title span { color: var(--primary); }
+
+        /* Contact Details Cards */
+        .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 1000px; margin: 0 auto 50px; }
+        .contact-card { background: #f8f9fa; padding: 25px; border-radius: 15px; border: 1px solid var(--border); transition: 0.3s; }
+        .contact-card:hover { border-color: var(--primary); transform: translateY(-5px); }
+        .contact-card i { font-size: 24px; color: var(--accent); margin-bottom: 15px; }
+        .contact-card h3 { font-size: 20px; margin-bottom: 10px; color: var(--primary); }
+        .contact-card p, .contact-card a { color: var(--text-dark); text-decoration: none; font-size: 16px; font-weight: 500; }
+
+        /* Map Styles */
+        .map-card { max-width: 1000px; margin: 0 auto; background: white; border: 1px solid var(--border); border-radius: 25px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .map-info { padding: 30px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; text-align: left; }
+        .map-btn { background: var(--primary); color: white; padding: 15px 30px; text-decoration: none; border-radius: 12px; font-weight: 600; transition: 0.3s; }
+        .map-btn:hover { background: var(--accent); }
+
+        .menu-toggle { display: none; cursor: pointer; flex-direction: column; gap: 6px; }
+        .menu-toggle span { width: 28px; height: 3px; background: var(--text-dark); }
+        .mobile-overlay { position: fixed; top: 0; right: -100%; width: 100%; height: 100vh; background: white; z-index: 2500; display: flex; flex-direction: column; justify-content: center; align-items: center; transition: 0.5s ease; }
+        .mobile-overlay.active { right: 0; }
+        .mobile-overlay a { font-size: 28px; font-weight: 800; color: var(--text-dark); text-decoration: none; margin: 20px 0; }
+        @media (max-width: 900px) { .menu-toggle { display: flex; } nav ul { display: none; } }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="brand"><img src="logo.jpg" class="logo-img"><div class="brand-text">TEAM <span>VICHARKRANTI</span></div></a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="news.html">Updates</a></li>
+                <li><a href="members.html">Members</a></li>
+                <li><a href="competition.html">Competition</a></li>
+                <li><a href="location.html">Location</a></li>
+            </ul>
+            <div class="menu-toggle" id="mobile-btn"><span></span><span></span><span></span></div>
+        </nav>
+    </header>
+
+    <div class="mobile-overlay" id="overlay">
+        <a href="index.html">Home</a><a href="news.html">Updates</a><a href="members.html">Members</a><a href="competition.html">Competition</a><a href="location.html">Location</a>
+    </div>
+
+    <section>
+        <h1 class="title">संपर्क आणि <span>पत्ता</span></h1>
+
+        <div class="contact-grid">
+            <div class="contact-card">
+                <i class="fas fa-phone-alt"></i>
+                <h3>फोन</h3>
+                <p><a href="tel:+919800000000">+91 98XXX XXXXX</a></p>
+            </div>
+            <div class="contact-card">
+                <i class="fas fa-envelope"></i>
+                <h3>ईमेल</h3>
+                <p><a href="mailto:info@vicharkranti.com">info@vicharkranti.com</a></p>
+            </div>
+            <div class="contact-card">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>ठिकाण</h3>
+                <p>जाखोरी, ता. नाशिक, जि. नाशिक</p>
+            </div>
+        </div>
+
+        <div class="map-card">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15004.475949511112!2d73.9163618!3d19.91937965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bddc6899d255f05%3A0x868427f2f1f516d2!2sJakhori%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
+            <div class="map-info">
+                <div>
+                    <h3 style="font-size: 20px; margin-bottom: 5px;">टीम विचारक्रांती कार्यालय</h3>
+                    <p style="color: var(--text-light);">सार्वजनिक वाचनालय, जाखोरी ग्रामपंचायत जवळ.</p>
+                </div>
+                <a href="https://www.google.com/maps/search/?api=1&query=Jakhori+Grampanchayat+Nashik" target="_blank" class="map-btn">मोठ्या मॅपवर पहा</a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const btn = document.getElementById('mobile-btn'), overlay = document.getElementById('overlay');
+        btn.onclick = () => { overlay.classList.toggle('active'); };
+    </script>
+</body>
+</html>

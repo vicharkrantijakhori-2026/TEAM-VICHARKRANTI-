@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEAM VICHARKRANTI | Members</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #0056b3; --accent: #FF6600; --bg: #ffffff; --text-dark: #1a1a1a; --border: rgba(0,0,0,0.08); }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        body { background: var(--bg); color: var(--text-dark); overflow-x: hidden; }
+
+        header { position: fixed; top: 0; width: 100%; z-index: 2000; padding: 12px 8%; display: flex; justify-content: space-between; align-items: center; background: rgba(255, 255, 255, 0.85); border-bottom: 1px solid var(--border); backdrop-filter: blur(15px); box-shadow: 0 2px 20px rgba(0,0,0,0.05); }
+        .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+        .logo-img { width: 45px; height: 45px; object-fit: contain; }
+        .brand-text { font-size: 18px; font-weight: 800; color: var(--text-dark); text-transform: uppercase; }
+        .brand-text span { color: var(--accent); }
+        
+        nav ul { display: flex; list-style: none; gap: 25px; }
+        nav ul li a { color: var(--text-dark); text-decoration: none; font-weight: 600; font-size: 14px; position: relative; transition: 0.3s; }
+        nav ul li a:hover { color: var(--accent); }
+
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
+        section { padding: 160px 8% 80px; min-height: 100vh; text-align: center; background: radial-gradient(circle at top left, rgba(0,86,179,0.05), transparent); }
+        .title { font-size: 45px; font-weight: 900; margin-bottom: 40px; animation: fadeInUp 0.8s ease-out; }
+        .title span { color: var(--primary); }
+
+        .member-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; max-width: 1100px; margin: 0 auto; animation: fadeInUp 1s ease-out; }
+        .member-link { text-decoration: none; color: inherit; display: block; }
+        
+        .member-card { background: white; padding: 40px 20px; border-radius: 20px; border: 1px solid var(--border); transition: 0.4s; box-shadow: 0 5px 15px rgba(0,0,0,0.02); cursor: pointer; }
+        .member-card:hover { transform: translateY(-10px); border-color: var(--primary); box-shadow: 0 15px 30px rgba(0,0,0,0.08); }
+        
+        .avatar { width: 100px; height: 100px; background: #f0f0f0; border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; font-size: 40px; color: #ccc; overflow: hidden; position: relative; border: 2px solid #eee; }
+        .avatar img { width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; z-index: 2; }
+        .avatar i { z-index: 1; }
+
+        .member-card h3 { font-size: 22px; margin-bottom: 8px; }
+        .role { color: var(--accent); font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; }
+
+        .menu-toggle { display: none; cursor: pointer; flex-direction: column; gap: 6px; }
+        .menu-toggle span { width: 28px; height: 3px; background: var(--text-dark); border-radius: 10px; }
+        .mobile-overlay { position: fixed; top: 0; right: -100%; width: 100%; height: 100vh; background: white; z-index: 2500; display: flex; flex-direction: column; justify-content: center; align-items: center; transition: 0.5s ease; }
+        .mobile-overlay.active { right: 0; }
+        .mobile-overlay a { font-size: 28px; font-weight: 800; color: var(--text-dark); text-decoration: none; margin: 20px 0; }
+        @media (max-width: 900px) { .menu-toggle { display: flex; } nav ul { display: none; } }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="brand"><img src="logo.jpg" class="logo-img"><div class="brand-text">TEAM <span>VICHARKRANTI</span></div></a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="news.html">Updates</a></li>
+                <li><a href="members.html">Members</a></li>
+                <li><a href="competition.html">Competition</a></li>
+                <li><a href="location.html">Location</a></li>
+            </ul>
+            <div class="menu-toggle" id="mobile-btn"><span></span><span></span><span></span></div>
+        </nav>
+    </header>
+
+    <div class="mobile-overlay" id="overlay">
+        <a href="index.html">Home</a><a href="news.html">Updates</a><a href="members.html">Members</a><a href="competition.html">Competition</a><a href="location.html">Location</a>
+    </div>
+
+    <section>
+        <h1 class="title">आमचे <span>कार्यकारी मंडळ</span></h1>
+        <div class="member-grid">
+            
+            <a href="suhash.html" class="member-link">
+                <div class="member-card">
+                    <div class="avatar">
+                        <img src="suhash.jpg" alt="" onerror="this.style.display='none'">
+                        <i class="fas fa-user"></i> 
+                    </div>
+                    <h3>सुहाश खाडे</h3>
+                    <p class="role">अध्यक्ष</p>
+                </div>
+            </a>
+
+            <a href="devidas.html" class="member-link">
+                <div class="member-card">
+                    <div class="avatar">
+                        <img src="devidas.jpg" alt="" onerror="this.style.display='none'">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>देविदास राजपूत</h3>
+                    <p class="role">सचिव</p>
+                </div>
+            </a>
+            
+            <a href="yash.html" class="member-link">
+                <div class="member-card">
+                    <div class="avatar">
+                        <img src="yash.jpg" alt="" onerror="this.style.display='none'">
+                        <i class="fas fa-user"></i> 
+                    </div>
+                    <h3>यश कडवे</h3>
+                    <p class="role">सदस्य</p>
+                </div>
+            </a>
+
+            <a href="aaditya.html" class="member-link">
+                <div class="member-card">
+                    <div class="avatar">
+                        <img src="aa.jpg" alt="" onerror="this.style.display='none'">
+                        <i class="fas fa-user"></i> 
+                    </div>
+                    <h3>आदित्य आव्हाड </h3>
+                    <p class="role">सदस्य</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <script>
+        const btn = document.getElementById('mobile-btn'), overlay = document.getElementById('overlay');
+        btn.onclick = () => { overlay.classList.toggle('active'); document.body.style.overflow = overlay.classList.contains('active') ? 'hidden' : 'auto'; };
+    </script>
+</body>
+</html>

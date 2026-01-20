@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEAM VICHARKRANTI | Competition</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #0056b3; --accent: #FF6600; --bg: #ffffff; --text-dark: #1a1a1a; --text-light: #666666; --border: rgba(0,0,0,0.08); }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        body { background: var(--bg); color: var(--text-dark); }
+        header { position: fixed; top: 0; width: 100%; z-index: 2000; padding: 12px 8%; display: flex; justify-content: space-between; align-items: center; background: rgba(255, 255, 255, 0.85); border-bottom: 1px solid var(--border); backdrop-filter: blur(15px); }
+        .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+        .logo-img { width: 45px; height: 45px; }
+        .brand-text { font-size: 18px; font-weight: 800; color: var(--text-dark); text-transform: uppercase; }
+        .brand-text span { color: var(--accent); }
+        nav ul { display: flex; list-style: none; gap: 25px; }
+        nav ul li a { color: var(--text-dark); text-decoration: none; font-weight: 600; font-size: 14px; }
+        
+        section { padding: 160px 8% 80px; min-height: 100vh; text-align: center; }
+        .title { font-size: 45px; font-weight: 900; margin-bottom: 40px; }
+        .title span { color: var(--primary); }
+
+        .info-box { background: #fcfcfc; border: 1px solid var(--border); border-radius: 20px; padding: 35px; max-width: 900px; margin: 0 auto 50px; text-align: left; }
+        .info-box h3 { color: var(--primary); margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
+        .info-box ul { list-style: none; line-height: 2.2; font-size: 17px; }
+        .info-box ul li i { color: var(--accent); margin-right: 10px; }
+
+        .table-wrap { max-width: 900px; margin: 0 auto; background: white; border-radius: 15px; border: 1px solid var(--border); overflow: hidden; }
+        table { width: 100%; border-collapse: collapse; text-align: left; }
+        th { background: #f8f9fa; padding: 20px; color: var(--primary); font-weight: 800; border-bottom: 2px solid var(--border); }
+        td { padding: 20px; border-bottom: 1px solid var(--border); }
+
+        .menu-toggle { display: none; cursor: pointer; flex-direction: column; gap: 6px; }
+        .menu-toggle span { width: 28px; height: 3px; background: var(--text-dark); }
+        .mobile-overlay { position: fixed; top: 0; right: -100%; width: 100%; height: 100vh; background: white; z-index: 2500; display: flex; flex-direction: column; justify-content: center; align-items: center; transition: 0.5s ease; }
+        .mobile-overlay.active { right: 0; }
+        .mobile-overlay a { font-size: 28px; font-weight: 800; color: var(--text-dark); text-decoration: none; margin: 20px 0; }
+        @media (max-width: 900px) { .menu-toggle { display: flex; } nav ul { display: none; } }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="brand"><img src="logo.jpg" class="logo-img"><div class="brand-text">TEAM <span>VICHARKRANTI</span></div></a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="news.html">Updates</a></li>
+                <li><a href="members.html">Members</a></li>
+                <li><a href="competition.html">Competition</a></li>
+                <li><a href="location.html">Location</a></li>
+            </ul>
+            <div class="menu-toggle" id="mobile-btn"><span></span><span></span><span></span></div>
+        </nav>
+    </header>
+
+    <div class="mobile-overlay" id="overlay">
+        <a href="index.html">Home</a><a href="news.html">Updates</a><a href="members.html">Members</a><a href="competition.html">Competition</a><a href="location.html">Location</a>
+    </div>
+
+    <section>
+        <h1 class="title">स्पर्धा आणि <span>उपक्रम</span></h1>
+        
+        <div class="info-box">
+            <h3><i class="fas fa-scroll"></i> नियम आणि अटी</h3>
+            <ul>
+                <li><i class="fas fa-check-circle"></i> प्रत्येक स्पर्धकाची सादरीकरणाची वेळ 6 (5+1) मिनिटे असेल.</li>
+                <li><i class="fas fa-check-circle"></i> स्पर्धकाचे वय 26 वषपिक्षा जास्त नसावे.</li>
+                                <li><i class="fas fa-check-circle"></i> स्पर्धेसाठी प्रवेश शुल्क प्रत्येकी 150 इतके असेलक.</li>
+                                                <li><i class="fas fa-check-circle"></i> स्पर्धकाने महाविद्यालयाचे किंवा कोणतेही एक शासनमान्य ओळखपत्र आणणे बंधनकारक आहे.</li>
+                                                                <li><i class="fas fa-check-circle"></i> सांघिक पारितोषिक नाव नोंदणीसाठी कोणतेही दोन स्पर्धक हे एकाच महाविद्यालयाचे विद्यार्थी असावेत.</li>
+                                                                                <li><i class="fas fa-check-circle"></i> अंतिम 40 स्पर्धकांनाच प्रवेश दिला जाईल</li>
+                                                                                                <li><i class="fas fa-check-circle"></i> परिक्षकांचा निर्णय अंतिम राहीलं. स्पर्धेच्या नियमात बदल करण्याचा सर्वस्वी हक्क संयोजकांकडे राखीव राहील</li>
+                                                                                                                <li><i class="fas fa-check-circle"></i> स्पर्धेच्या दिवशी संयोजकांच्या वतीने दोन वेळचा चहा व दुपारचे जेवण वीले जाईल.</li>
+                                                                                                                                <li><i class="fas fa-check-circle"></i> परगावी स्पर्धकांची अगोदरच्या दिवशी राहण्याची व्यवस्था केली जाईल.</li>
+            </ul>
+        </div>
+
+        <h2 style="margin-bottom: 25px;">🏆 मागील विजेते</h2>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr><th>वर्ष</th><th>विजेता</th><th>ठिकाण</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>२०२६</td><td>वेदिका शिऊरकादे</td><td>छत्रपती संभाजीनगर</td></tr>
+                    
+                     <tr><td>२०२५
+                   </td><td>अनिश बेल्लूस्कर</td> <td>परभणी </tr>
+                   
+                    <tr><td>२०२४
+                   </td><td>  यश पाटील</td> <td>कल्याण </tr>
+                   
+                    <tr><td>२०२३
+                   </td><td>   संकेत पाटील</td> <td> कोल्हापूर </tr>
+                </tbody>
+                   
+                    <tr><td>२०२२
+                   </td><td>  सुजित काळंगे</td> <td>सातारा </tr>
+                   
+                    <tr><td>२०२१
+                   </td><td>      आश्विनी टाव्हरे </td> <td>पुणे </tr>
+                   
+                    <tr><td>२०२०
+                   </td><td>    मुग्धा थोरात</td> <td>नाशिक </tr>
+                   
+                    <tr><td>२०१९
+                   </td><td>  रुपाली पळसे</td> <td> पिंपळगाव बसवंत </tr>
+                   
+                    <tr><td>२०१८
+                   </td><td>  प्रवीण शिंदे  </td> <td>पुणे </tr>
+                </tbody>
+           
+           
+            </table>
+        </div>
+    </section>
+
+    <script>
+        const btn = document.getElementById('mobile-btn'), overlay = document.getElementById('overlay');
+        btn.onclick = () => { overlay.classList.toggle('active'); };
+    </script>
+</body>
+</html>
