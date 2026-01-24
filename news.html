@@ -3,89 +3,365 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TEAM VICHARKRANTI | Updates</title>
+    <title>Updates | TEAM VICHARKRANTI</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
-        /* CSS index.html sarakhach aahe */
-        :root { --primary: #0056b3; --accent: #FF6600; --bg: #ffffff; --text-dark: #1a1a1a; --text-light: #666666; --border: rgba(0,0,0,0.08); }
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
-        body { background: var(--bg); color: var(--text-dark); }
-        header { position: fixed; top: 0; width: 100%; z-index: 2000; padding: 12px 8%; display: flex; justify-content: space-between; align-items: center; background: rgba(255, 255, 255, 0.85); border-bottom: 1px solid var(--border); backdrop-filter: blur(15px); }
-        .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-        .logo-img { width: 45px; height: 45px; }
-        .brand-text { font-size: 18px; font-weight: 800; color: var(--text-dark); text-transform: uppercase; }
-        .brand-text span { color: var(--accent); }
-        nav ul { display: flex; list-style: none; gap: 25px; }
-        nav ul li a { color: var(--text-dark); text-decoration: none; font-weight: 600; font-size: 14px; }
+    .section-image{
+    margin-top:40px;
+    display:flex;
+    justify-content:center;
+}
+
+.section-image img{
+    width:100%;
+    max-width:850px;
+    border-radius:18px;
+    box-shadow:0 20px 40px rgba(0,0,0,0.12);
+}
+
+:root{
+    --primary:#0056b3;
+    --accent:#FF6600;
+    --bg:#ffffff;
+    --text-dark:#1a1a1a;
+    --text-light:#666;
+    --border:rgba(0,0,0,0.08);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+}
+
+body{
+    background:var(--bg);
+    color:var(--text-dark);
+    overflow-x:hidden;
+}
+
+/* ================= HEADER ================= */
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:2000;
+    padding:12px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(255,255,255,0.9);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--border);
+}
+
+.brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    text-decoration:none;
+}
+
+.logo-img{
+    width:45px;
+    height:45px;
+}
+
+.brand-text{
+    font-size:18px;
+    font-weight:800;
+    letter-spacing:1px;
+    color:var(--text-dark);
+}
+
+.brand-text span{color:var(--accent);}
+
+/* Desktop Menu */
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:25px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    font-weight:600;
+    font-size:14px;
+    color:var(--text-dark);
+}
+
+/* Mobile Menu Icon */
+.menu-toggle{
+    display:none;
+    flex-direction:column;
+    gap:6px;
+    cursor:pointer;
+}
+
+.menu-toggle span{
+    width:28px;
+    height:3px;
+    background:var(--text-dark);
+    border-radius:10px;
+}
+
+/* Mobile Overlay Menu */
+.mobile-menu{
+    position:fixed;
+    top:0;
+    right:-100%;
+    width:100%;
+    height:100vh;
+    background:#fff;
+    z-index:3000;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    transition:0.4s ease;
+}
+
+.mobile-menu.active{
+    right:0;
+}
+
+.mobile-menu a{
+    text-decoration:none;
+    font-size:28px;
+    font-weight:800;
+    color:var(--text-dark);
+    margin:18px 0;
+}
+
+/* ================= SECTIONS ================= */
+section{
+    padding:160px 8% 90px;
+    text-align:center;
+    background:radial-gradient(circle at top right, rgba(255,102,0,0.05), transparent);
+}
+
+.title{
+    font-size:clamp(34px,6vw,56px);
+    font-weight:900;
+    color:var(--primary);
+    margin-bottom:15px;
+}
+
+.section-line{
+    width:90px;
+    height:4px;
+    background:var(--primary);
+    border:none;
+    border-radius:10px;
+    margin:18px auto 30px;
+}
+
+.subtitle{
+    max-width:900px;
+    margin:0 auto;
+    font-size:16px;
+    line-height:1.9;
+    color:var(--text-light);
+}
+
+/* ================= FOOTER ================= */
+footer{
+    background:#f8f9fa;
+    padding:60px 8% 20px;
+    border-top:1px solid var(--border);
+}
+
+footer p{
+    font-size:14px;
+    color:#666;
+    line-height:1.6;
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:900px){
+    nav ul{display:none;}
+    .menu-toggle{display:flex;}
+}
+        :root {
+            --primary: #0056b3; --accent: #FF6600; --bg: #ffffff;
+            --text-dark: #1a1a1a; --text-light: #666666; --border: rgba(0,0,0,0.08);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        body { background: var(--bg); color: var(--text-dark); overflow-x: hidden; }
+
+        header {
+            position: fixed; top: 0; width: 100%; z-index: 2000;
+            padding: 12px 8%; display: flex; justify-content: space-between; align-items: center;
+            background: rgba(255, 255, 255, 0.85); border-bottom: 1px solid var(--border);
+            backdrop-filter: blur(10px);
+        }
+        .brand { font-size: 20px; font-weight: 800; text-decoration: none; color: var(--text-dark); letter-spacing: -1px; }
+        .brand span { color: var(--primary); }
         
-        section { padding: 160px 8% 80px; min-height: 100vh; text-align: center; }
-        .title { font-size: 45px; font-weight: 900; margin-bottom: 40px; }
+        nav ul { display: flex; list-style: none; gap: 30px; }
+        nav ul li a { text-decoration: none; color: var(--text-dark); font-weight: 500; font-size: 14px; transition: 0.3s; }
+        nav ul li a:hover { color: var(--primary); }
+
+        .menu-toggle { display: none; cursor: pointer; flex-direction: column; gap: 5px; }
+        .menu-toggle span { width: 25px; height: 2px; background: var(--text-dark); transition: 0.3s; }
+
+        .mobile-overlay {
+            position: fixed; top: 0; left: 100%; width: 100%; height: 100vh;
+            background: white; z-index: 1500; display: flex; flex-direction: column;
+            justify-content: center; align-items: center; gap: 30px; transition: 0.4s;
+        }
+        .mobile-overlay.active { left: 0; }
+        .mobile-overlay a { font-size: 24px; text-decoration: none; color: var(--text-dark); font-weight: 800; }
+
+        .container { padding: 150px 8% 80px; text-align: center; }
+        .title { font-size: 42px; font-weight: 800; margin-bottom: 40px; }
         .title span { color: var(--primary); }
 
-        .news-container { max-width: 800px; margin: 0 auto; text-align: left; }
-        .news-card { background: white; border: 1px solid var(--border); border-radius: 15px; padding: 30px; margin-bottom: 20px; transition: 0.3s; }
-        .news-card:hover { border-color: var(--primary); transform: translateX(10px); }
-        .date { color: var(--primary); font-weight: 800; font-size: 14px; text-transform: uppercase; }
-        .news-card p { margin-top: 10px; font-size: 18px; line-height: 1.6; }
+        .news-grid { display: grid; gap: 30px; max-width: 800px; margin: 0 auto; text-align: left; }
+        .news-card { 
+            background: #fff; padding: 30px; border-radius: 20px; 
+            border: 1px solid var(--border); transition: 0.3s;
+        }
+        .news-card:hover { transform: translateY(-5px); border-color: var(--accent); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .date { color: var(--accent); font-weight: 800; font-size: 14px; display: block; margin-bottom: 10px; }
 
-        .menu-toggle { display: none; cursor: pointer; flex-direction: column; gap: 6px; }
-        .menu-toggle span { width: 28px; height: 3px; background: var(--text-dark); }
-        .mobile-overlay { position: fixed; top: 0; right: -100%; width: 100%; height: 100vh; background: white; z-index: 2500; display: flex; flex-direction: column; justify-content: center; align-items: center; transition: 0.5s ease; }
-        .mobile-overlay.active { right: 0; }
-        .mobile-overlay a { font-size: 28px; font-weight: 800; color: var(--text-dark); text-decoration: none; margin: 20px 0; }
-        @media (max-width: 900px) { .menu-toggle { display: flex; } nav ul { display: none; } }
+        footer { background: #f8f9fa; padding: 60px 8% 20px; border-top: 1px solid var(--border); }
+        
+        @media (max-width: 768px) {
+            nav ul { display: none; }
+            .menu-toggle { display: flex; }
+            .title { font-size: 32px; }
+        }
+        .logo-img{
+    width:45px;
+    height:45px;
     </style>
 </head>
 <body>
-    <header>
-        <a href="index.html" class="brand"><img src="logo.jpg" class="logo-img"><div class="brand-text">TEAM <span>VICHARKRANTI</span></div></a>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="news.html">Updates</a></li>
-                <li><a href="members.html">Members</a></li>
-                <li><a href="competition.html">Competition</a></li>
-                <li><a href="location.html">Location</a></li>
-            </ul>
-            <div class="menu-toggle" id="mobile-btn"><span></span><span></span><span></span></div>
-        </nav>
-    </header>
 
+<header>
+<a href="index.html" class="brand">
+<img src="logo.jpg" class="logo-img">
+<div class="brand-text">TEAM <span>VICHARKRANTI</span></div>
+</a>
+
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="news.html">Updates</a></li>
+<li><a href="members.html">Members</a></li>
+<li><a href="competition.html">Competition</a></li>
+<li><a href="location.html">Location</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+
+<div class="menu-toggle" id="menuBtn">
+<span></span>
+<span></span>
+<span></span>
+</div>
+</header>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+<a href="index.html">Home</a>
+<a href="news.html">Updates</a>
+<a href="members.html">Members</a>
+<a href="competition.html">Competition</a>
+<a href="location.html">Location</a>
+<a href="contact.html">Contact</a>
+</div>
     <div class="mobile-overlay" id="overlay">
-        <a href="index.html">Home</a><a href="news.html">Updates</a><a href="members.html">Members</a><a href="competition.html">Competition</a><a href="location.html">Location</a>
+        <a href="index.html">Home</a>
+        <a href="news.html">Updates</a>
+        <a href="members.html">Members</a>
+        <a href="competition.html">Competition</a>
+        <a href="location.html">Location</a>
+        <a href="contact.html">Contact</a>
     </div>
 
-    <section>
-        <h1 class="title">महत्त्वाचे <span>अपडेट्स</span></h1>
-        <div class="news-container">
-          
-           
+    <section class="container">
+        <h1 class="title">ताज्या घडामोडी</span></h1
+                      <div class="news-grid">
             <div class="news-card">
-                <span class="date">१९ जानेवारी २०२६</span>
-                <p>📢 राज्यस्तरीय वक्तृत्व स्पर्धा-२०२७ लवकरच तारीख जाहीर होणार आहे. तयारीला लागा!</p>
+                <span class="date">१२ जानेवारी २०२६</span>
+                <h3>स्पर्धेचा निकाल जाहीर!</h3>
+            <div class="section-image">
+    <img src="newz2.jpg" alt=>
+</div> 
+       
+       
+               <div class="news-grid">
+            <div class="news-card">
+                <span class="date">१२ जानेवारी २०२६</span>
+                <h3>स्पर्धेचा निकाल जाहीर!</h3>
+            <div class="section-image">
+    <img src="newz1.jpg" alt=>
+</div> 
             </div>
-            
- 
+        <div class="news-grid">
+            <div class="news-card">
+                <span class="date">१२ जानेवारी २०२६</span>
+                <h3>स्पर्धेचा निकाल जाहीर!</h3>
+                <p>प्रथम क्रमांक - वेदिका शिऊरकर. द्वितीय - सिद्धी गवळी. तृतीय - आर्या जाधव.</p>
+            </div>
             <div class="news-card">
                 <span class="date">११ जानेवारी २०२६</span>
-                <p>📢 प्रथम - वेदिका शिऊरकर, छत्रपती संभाजीनगर. द्वितीय- सिद्धी गवळी, पिंपळगाव बसवंत. तृतीय आर्या जाधव, अकोला. चतुर्थ - नावीन्या मिंदे, त्र्यंबकेश्वर. उत्तेजनार्थ कावेरी कासार (शेवगे दारणा), समीक्षा जगताप (ठाणगाव), योगेश वाघचौरे (तळेगाव), सानिया सय्यद (सायखेडा), श्रद्धा अहिनवे (पुणे). सांघिक विचारकांती करंडकः सायखेडा, नाशिक.!</p>
+                <h3>वक्तृत्व स्पर्धा उत्साहात</h3>
+                <p>जाखोरी येथे आयोजित वक्तृत्व स्पर्धेत ५० हून अधिक विद्यार्थ्यांनी सहभाग घेतला.</p>
             </div>
-           <div class="news-card">
-                <span class="date">११ जानेवारी २०२६</span>
-                <p>📢 जाखोरी येथील विचारक्रांती सार्वजनिक
-
-वाचनालयाच्यावतीने राज्यस्तरीय वक्तृत्व स्पर्धा उत्साहात पार पडली. या स्पर्धेचे उद्घाटन युवा व्याख्याते तथा कवी प्रा. अमोल चिने यांच्या हस्ते झाले. प्रमुख पाहुणे जयम फाउंडेशनचे भारद्वाज, रोटरी क्लबचे संजय कलंत्री, जाखोरीच्या सरपंच अर्पणा कळमकर व उपसरपंच राहुल धात्रक उपस्थित होते.
-
-या स्पर्धेत छत्रपती संभाजीनगर येथील वेदिका शिऊरकर हिने उत्कृष्ट वक्तृत्व सादर करीत प्रथम क्रमांक 'विचारक्रांती युवा वक्ता २०२६' हा मानाचा पुरस्कार पटकावला. तर सांघिक विचारक्रांती करंडक सायखेडा (नाशिक) येथील मविप्र महाविद्यालयाच्या संघाने पटकावला. या संघात अवंतिका डेर्ले, प्रांजल सोनवणे, सानिया सैय्यद व सानिका इंधे यांचा समावेश होता. ही स्पर्धा यंदा नवव्या वर्षात पदार्पण करीत असून राज्याच्या विविध भागांतून एकूण ५१ स्पर्धकांनी सहभाग नोंदवला.!</p>
-            </div>
-           
         </div>
     </section>
 
+<footer style="background: #f8f9fa; padding: 60px 8% 20px; border-top: 1px solid rgba(0,0,0,0.08); margin-top: 50px;">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; text-align: left;">
+        
+        <div>
+            <div class="brand-text" style="font-size: 22px; margin-bottom: 20px;">TEAM <span>VICHARKRANTI</span></div>
+            <p style="color: #666; line-height: 1.6; font-size: 14px;">
+                "ज्ञानदिप लावू जगी" - विचार, परिवर्तन आणि कृती या त्रिसूत्रीवर आधारित जाखोरीच्या सर्वांगीण विकासासाठी कार्यरत युवकांची संघटना.
+            </p>
+        </div>
+
+        <div>
+            <h4 style="margin-bottom: 20px; color: #1a1a1a;">महत्वाचे दुवे</h4>
+            <ul style="list-style: none; line-height: 2;">
+                <li><a href="index.html" style="text-decoration: none; color: #666; font-size: 14px;">होम</a></li>
+                <li><a href="news.html" style="text-decoration: none; color: #666; font-size: 14px;">ताज्या घडामोडी</a></li>
+                <li><a href="members.html" style="text-decoration: none; color: #666; font-size: 14px;">आमचे सदस्य</a></li>
+                <li><a href="competition.html" style="text-decoration: none; color: #666; font-size: 14px;">स्पर्धा नोंदणी</a></li>
+                <li><a href="location.html" style="text-decoration: none; color: #666; font-size: 14px;">संपर्क</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4 style="margin-bottom: 20px; color: #1a1a1a;">आमच्याशी जोडून राहा</h4>
+            <div style="display: flex; gap: 15px;">
+                <a href="https://www.instagram.com/team_vicharkranti/" target="_blank" style="color: #e4405f; font-size: 20px;"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/JakhoriPublicLibrary/" target="_blank" style="color: #1877f2; font-size: 20px;"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://youtube.com/channel/UCJsniK5Xhn-N9BksZGiDRQw" target="_blank" style="color: #ff0000; font-size: 20px;"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p style="margin-top: 20px; font-size: 14px; color: #666;">
+                <i class="fas fa-map-marker-alt"></i> जाखोरी, ता. नाशिक, जि. नाशिक
+            </p>
+        </div>
+    </div>
+
+    <div style="margin-top: 50px; padding-top: 20px; border-top: 1px solid rgba(0,0,0,0.05); text-align: center; font-size: 13px; color: #999;">
+        <p>© २०२६ टीम विचारक्रांती. सर्व हक्क राखीव. | Designed by <a href="https://www.instagram.com/team_vicharkranti/" target="_blank" class="btn insta-btn">
+                    <i class="fab fa-instagram"></i> TEAM VICHARKRANTI
+                </a></p>
+    </div>
+</footer>
+
+
     <script>
-        const btn = document.getElementById('mobile-btn'), overlay = document.getElementById('overlay');
-        btn.onclick = () => { overlay.classList.toggle('active'); };
+        const mobileBtn = document.getElementById('mobile-btn');
+        const overlay = document.getElementById('overlay');
+        mobileBtn.onclick = () => overlay.classList.toggle('active');
     </script>
 </body>
 </html>

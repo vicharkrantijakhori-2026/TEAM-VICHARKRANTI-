@@ -26,7 +26,7 @@
         .submit-btn { width: 100%; padding: 15px; background: var(--primary); color: white; border: none; border-radius: 10px; font-weight: 700; font-size: 18px; cursor: pointer; transition: 0.3s; }
         .submit-btn:hover { background: #004494; transform: translateY(-2px); }
         
-        .back-link { display: block; text-align: center; margin-top: 20px; text-decoration: none; color: var(--text-light); font-size: 14px; }
+        .back-link { display: block; text-align: center; margin-top: 20px; text-decoration: none; color: #666; font-size: 14px; }
     </style>
 </head>
 <body>
@@ -38,35 +38,37 @@
 
     <div class="form-container">
         <h2>प्रवेश नोंदणी फॉर्म</h2>
-        <form action="#" method="POST">
+        
+        <form action="https://docs.google.com/forms/d/e/1FAIpQLSfWu6fP1jdyXg2e-cYCt21b-Ukq6voc0kJLFf5QNejNfh8pIA/formResponse" method="POST">
+            
             <div class="form-group">
                 <label>स्पर्धकाचे पूर्ण नाव *</label>
-                <input type="text" placeholder="तुमचे नाव लिहा" required>
+                <input type="text" name="entry.1884405391" placeholder="तुमचे नाव लिहा" required>
             </div>
             
             <div class="form-group">
                 <label>मोबाईल नंबर *</label>
-                <input type="tel" placeholder="तुमचा नंबर" required>
+                <input type="tel" name="entry.148119777" placeholder="तुमचा नंबर" required>
             </div>
 
             <div class="form-group">
                 <label>ईमेल पत्ता</label>
-                <input type="email" placeholder="तुमचा ईमेल">
+                <input type="email" name="entry.1970222079" placeholder="तुमचा ईमेल">
             </div>
 
             <div class="form-group">
                 <label>महाविद्यालयाचे नाव *</label>
-                <input type="text" placeholder="कॉलेजचे नाव" required>
+                <input type="text" name="entry.1084288019" placeholder="कॉलेजचे नाव" required>
             </div>
 
             <div class="form-group">
                 <label>जिल्हा *</label>
-                <input type="text" placeholder="उदा. नाशिक" required>
+                <input type="text" name="entry.669862283" placeholder="उदा. नाशिक" required>
             </div>
 
             <div class="form-group">
                 <label>वय *</label>
-                <input type="number" placeholder="तुमचे वय" required>
+                <input type="number" name="entry.169121927" placeholder="तुमचे वय" required>
             </div>
 
             <button type="submit" class="submit-btn">नोंदणी पूर्ण करा</button>
