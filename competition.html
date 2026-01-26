@@ -69,18 +69,26 @@
 
     <div class="mobile-overlay" id="overlay">
         <a href="index.html">Home</a><a href="news.html">Updates</a><a href="members.html">Members</a><a href="competition.html">Competition</a><a href="location.html">Location</a>
+        <a href="contact.html">Contact</a>
     </div>
 
     <section>
         <h1 class="title">स्पर्धा आणि <span>उपक्रम</span></h1>
         <div style="margin-bottom: 40px;">
    
-<div style="margin-bottom: 40px;">
-    <p style="margin-bottom: 15px; font-weight: 600; color: var(--text-light);">स्पर्धेत सहभागी होण्यासाठी खालील बटणावर क्लिक करा:</p>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfWu6fP1jdyXg2e-cYCt21b-Ukq6voc0kJLFf5QNejNfh8pIA/viewform?usp=header" target="_blank" style="display: inline-block; padding: 15px 40px; background: var(--accent); color: white; text-decoration: none; border-radius: 50px; font-weight: 800; font-size: 18px; box-shadow: 0 10px 20px rgba(255, 102, 0, 0.2); transition: 0.3s;">
-        <i class="fas fa-edit"></i> स्पर्धेसाठी नोंदणी करा
-    </a>
-</div>
+<a href="registration.html"
+   style="
+   display: inline-block;
+   padding: 12px 28px;
+   background-color: orange;
+   color: white;
+   font-weight: 700;
+   border-radius: 8px;
+   text-decoration: none;
+   border: 2px solid orange;
+   ">
+   स्पर्धेसाठी नोंदणी
+</a>
 
 </div>
 
@@ -181,10 +189,17 @@
     </div>
 </footer>
 
+<script>
+  const menuBtn = document.getElementById('menuBtn');
+  const overlay = document.getElementById('overlay');
 
-    <script>
-        const btn = document.getElementById('mobile-btn'), overlay = document.getElementById('overlay');
-        btn.onclick = () => { overlay.classList.toggle('active'); };
-    </script>
+  menuBtn.addEventListener('click', () => {
+    overlay.classList.toggle('active');
+
+    // optional but recommended
+    document.body.style.overflow =
+      overlay.classList.contains('active') ? 'hidden' : 'auto';
+  });
+</script>
 </body>
 </html>

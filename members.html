@@ -75,6 +75,8 @@
 
     <div class="mobile-overlay" id="overlay">
         <a href="index.html">Home</a><a href="news.html">Updates</a><a href="members.html">Members</a><a href="competition.html">Competition</a><a href="location.html">Location</a>
+        
+<a href="contact.html">Contact</a>
     </div>
 
     <section>
@@ -178,9 +180,17 @@
     </div>
 </footer>
 
-    <script>
-        const btn = document.getElementById('mobile-btn'), overlay = document.getElementById('overlay');
-        btn.onclick = () => { overlay.classList.toggle('active'); document.body.style.overflow = overlay.classList.contains('active') ? 'hidden' : 'auto'; };
-    </script>
+<script>
+  const menuBtn = document.getElementById('menuBtn');
+  const overlay = document.getElementById('overlay');
+
+  menuBtn.addEventListener('click', () => {
+    overlay.classList.toggle('active');
+
+    // optional but recommended
+    document.body.style.overflow =
+      overlay.classList.contains('active') ? 'hidden' : 'auto';
+  });
+</script>   
 </body>
 </html>

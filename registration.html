@@ -1,80 +1,102 @@
-<!DOCTYPE html>
-<html lang="mr">
+<!DOCTYPE html><html lang="mr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration | TEAM VICHARKRANTI</title>
+    <title>Registration Closed | TEAM VICHARKRANTI</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
         :root { --primary: #0056b3; --accent: #FF6600; --bg: #f8f9fa; --text-dark: #1a1a1a; --border: rgba(0,0,0,0.1); }
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
         body { background: var(--bg); color: var(--text-dark); }
-        
         header { padding: 20px 8%; display: flex; justify-content: space-between; align-items: center; background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
         .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; font-weight: 800; color: var(--text-dark); }
         .logo-img { width: 40px; }
-
-        .form-container { max-width: 600px; margin: 50px auto; background: white; padding: 40px; border-radius: 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.05); }
-        h2 { text-align: center; margin-bottom: 30px; color: var(--primary); font-weight: 800; }
-        
-        .form-group { margin-bottom: 20px; }
-        label { display: block; margin-bottom: 8px; font-weight: 600; font-size: 14px; }
-        input, select, textarea { width: 100%; padding: 12px 15px; border: 1px solid var(--border); border-radius: 10px; font-size: 16px; outline: none; transition: 0.3s; }
-        input:focus { border-color: var(--primary); }
-
-        .submit-btn { width: 100%; padding: 15px; background: var(--primary); color: white; border: none; border-radius: 10px; font-weight: 700; font-size: 18px; cursor: pointer; transition: 0.3s; }
-        .submit-btn:hover { background: #004494; transform: translateY(-2px); }
-        
-        .back-link { display: block; text-align: center; margin-top: 20px; text-decoration: none; color: #666; font-size: 14px; }
+        .form-container { max-width: 600px; margin: 60px auto; background: white; padding: 40px; border-radius: 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.05); text-align: center; }
+        h2 { margin-bottom: 15px; color: var(--primary); font-weight: 800; }
+        .status-box { background: #eef4ff; border-left: 6px solid var(--primary); padding: 20px; border-radius: 12px; margin-top: 25px; }
+        .status-box h3 { color: var(--primary); margin-bottom: 10px; }
+        .status-box p { font-size: 15px; line-height: 1.6; color: #333; }
+        .notify { margin-top: 20px; font-size: 14px; color: #555; }
+        .back-link { display: inline-block; margin-top: 30px; text-decoration: none; color: var(--primary); font-weight: 600; }
     </style>
 </head>
-<body>
+<body><header>
+    <a href="index.html" class="brand"><img src="logo.jpg" class="logo-img"> TEAM VICHARKRANTI</a>
+    <a href="competition.html" style="text-decoration: none; color: var(--primary); font-weight: 600;">मागे जा</a>
+</header>
 
-    <header>
-        <a href="index.html" class="brand"><img src="logo.jpg" class="logo-img"> TEAM VICHARKRANTI</a>
-        <a href="competition.html" style="text-decoration: none; color: var(--primary); font-weight: 600;">मागे जा</a>
-    </header>
+<div class="form-container">
+    <h2>प्रवेश नोंदणी</h2>
 
-    <div class="form-container">
-        <h2>प्रवेश नोंदणी फॉर्म</h2>
-        
-        <form action="https://docs.google.com/forms/d/e/1FAIpQLSfWu6fP1jdyXg2e-cYCt21b-Ukq6voc0kJLFf5QNejNfh8pIA/formResponse" method="POST">
-            
-            <div class="form-group">
-                <label>स्पर्धकाचे पूर्ण नाव *</label>
-                <input type="text" name="entry.1884405391" placeholder="तुमचे नाव लिहा" required>
-            </div>
-            
-            <div class="form-group">
-                <label>मोबाईल नंबर *</label>
-                <input type="tel" name="entry.148119777" placeholder="तुमचा नंबर" required>
-            </div>
-
-            <div class="form-group">
-                <label>ईमेल पत्ता</label>
-                <input type="email" name="entry.1970222079" placeholder="तुमचा ईमेल">
-            </div>
-
-            <div class="form-group">
-                <label>महाविद्यालयाचे नाव *</label>
-                <input type="text" name="entry.1084288019" placeholder="कॉलेजचे नाव" required>
-            </div>
-
-            <div class="form-group">
-                <label>जिल्हा *</label>
-                <input type="text" name="entry.669862283" placeholder="उदा. नाशिक" required>
-            </div>
-
-            <div class="form-group">
-                <label>वय *</label>
-                <input type="number" name="entry.169121927" placeholder="तुमचे वय" required>
-            </div>
-
-            <button type="submit" class="submit-btn">नोंदणी पूर्ण करा</button>
-        </form>
-        <a href="competition.html" class="back-link"><i class="fas fa-arrow-left"></i> स्पर्धा पानावर परत जा</a>
+    <div class="status-box">
+        <h3>🚫 नोंदणी सध्या बंद आहे</h3>
+        <p>
+            या स्पर्धेसाठी नोंदणी प्रक्रिया अजून सुरू झालेली नाही.<br>
+            नोंदणी सुरू झाल्यानंतर ह्याच पानावर फॉर्म उपलब्ध करून दिला जाईल.
+        </p>
     </div>
+
+    <p class="notify">📢 नोंदणीच्या अपडेटसाठी आमचे सोशल मीडिया पेज आणि वेबसाईट नियमित तपासत रहा.</p>
+
+    <a href="competition.html" class="back-link"><i class="fas fa-arrow-left"></i> स्पर्धा पानावर परत जा</a>
+</div>
+
+
+<footer style="background: #f8f9fa; padding: 60px 8% 20px; border-top: 1px solid rgba(0,0,0,0.08); margin-top: 50px;">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; text-align: left;">
+        
+        <div>
+            <div class="brand-text" style="font-size: 22px; margin-bottom: 20px;">TEAM <span>VICHARKRANTI</span></div>
+            <p style="color: #666; line-height: 1.6; font-size: 14px;">
+                "ज्ञानदिप लावू जगी" - विचार, परिवर्तन आणि कृती या त्रिसूत्रीवर आधारित जाखोरीच्या सर्वांगीण विकासासाठी कार्यरत युवकांची संघटना.
+            </p>
+        </div>
+
+        <div>
+            <h4 style="margin-bottom: 20px; color: #1a1a1a;">महत्वाचे दुवे</h4>
+            <ul style="list-style: none; line-height: 2;">
+                <li><a href="index.html" style="text-decoration: none; color: #666; font-size: 14px;">होम</a></li>
+                <li><a href="news.html" style="text-decoration: none; color: #666; font-size: 14px;">ताज्या घडामोडी</a></li>
+                <li><a href="members.html" style="text-decoration: none; color: #666; font-size: 14px;">आमचे सदस्य</a></li>
+                <li><a href="competition.html" style="text-decoration: none; color: #666; font-size: 14px;">स्पर्धा नोंदणी</a></li>
+                <li><a href="location.html" style="text-decoration: none; color: #666; font-size: 14px;">संपर्क</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4 style="margin-bottom: 20px; color: #1a1a1a;">आमच्याशी जोडून राहा</h4>
+            <div style="display: flex; gap: 15px;">
+                <a href="https://www.instagram.com/team_vicharkranti/" target="_blank" style="color: #e4405f; font-size: 20px;"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/JakhoriPublicLibrary/" target="_blank" style="color: #1877f2; font-size: 20px;"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://youtube.com/channel/UCJsniK5Xhn-N9BksZGiDRQw" target="_blank" style="color: #ff0000; font-size: 20px;"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p style="margin-top: 20px; font-size: 14px; color: #666;">
+                <i class="fas fa-map-marker-alt"></i> जाखोरी, ता. नाशिक, जि. नाशिक
+            </p>
+        </div>
+    </div>
+
+    <div style="margin-top: 50px; padding-top: 20px; border-top: 1px solid rgba(0,0,0,0.05); text-align: center; font-size: 13px; color: #999;">
+        <p>© २०२६ टीम विचारक्रांती. सर्व हक्क राखीव. | Designed by <a href="https://www.instagram.com/team_vicharkranti/" target="_blank" class="btn insta-btn">
+                    <i class="fab fa-instagram"></i> TEAM VICHARKRANTI
+                </a></p>
+    </div>
+</footer>
+
+
+<script>
+  const menuBtn = document.getElementById('menuBtn');
+  const overlay = document.getElementById('overlay');
+
+  menuBtn.addEventListener('click', () => {
+    overlay.classList.toggle('active');
+
+    // optional but recommended
+    document.body.style.overflow =
+      overlay.classList.contains('active') ? 'hidden' : 'auto';
+  });
+</script>
 
 </body>
 </html>

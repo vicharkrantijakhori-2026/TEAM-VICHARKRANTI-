@@ -390,10 +390,17 @@ footer p{
 </footer>
 
 
-    <script>
-        const mobileBtn = document.getElementById('mobile-btn');
-        const overlay = document.getElementById('overlay');
-        mobileBtn.onclick = () => overlay.classList.toggle('active');
-    </script>
+<script>
+  const menuBtn = document.getElementById('menuBtn');
+  const overlay = document.getElementById('overlay');
+
+  menuBtn.addEventListener('click', () => {
+    overlay.classList.toggle('active');
+
+    // optional but recommended
+    document.body.style.overflow =
+      overlay.classList.contains('active') ? 'hidden' : 'auto';
+  });
+</script>
 </body>
 </html>
